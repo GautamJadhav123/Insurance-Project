@@ -1,0 +1,64 @@
+[1mdiff --git a/src/main/java/com/insuranceApp/model/Admin.java b/src/main/java/com/insuranceApp/model/Admin.java[m
+[1mindex 919ac89..f7d33af 100644[m
+[1m--- a/src/main/java/com/insuranceApp/model/Admin.java[m
+[1m+++ b/src/main/java/com/insuranceApp/model/Admin.java[m
+[36m@@ -1,10 +1,18 @@[m
+ package com.insuranceApp.model;[m
+ [m
+[32m+[m[32mimport javax.persistence.Entity;[m
+[32m+[m[32mimport javax.persistence.GeneratedValue;[m
+[32m+[m[32mimport javax.persistence.GenerationType;[m
+[32m+[m[32mimport javax.persistence.Id;[m
+[32m+[m[32mimport javax.persistence.Table;[m
+ [m
+[32m+[m[32m@Entity[m
+[32m+[m[32m@Table (name = "Admins")[m
+ public class Admin {[m
+ 	[m
+ 	[m
+[31m-	[m
+[32m+[m	[32m@Id[m
+[32m+[m	[32m@GeneratedValue (strategy = GenerationType.IDENTITY)[m
+ 	private Integer adminId;[m
+ 	[m
+ 	private String name;[m
+[36m@@ -13,4 +21,39 @@[m [mpublic class Admin {[m
+ 	[m
+ 	private String password;[m
+ [m
+[32m+[m	[32mpublic Integer getAdminId() {[m
+[32m+[m		[32mreturn adminId;[m
+[32m+[m	[32m}[m
+[32m+[m
+[32m+[m	[32mpublic void setAdminId(Integer adminId) {[m
+[32m+[m		[32mthis.adminId = adminId;[m
+[32m+[m	[32m}[m
+[32m+[m
+[32m+[m	[32mpublic String getName() {[m
+[32m+[m		[32mreturn name;[m
+[32m+[m	[32m}[m
+[32m+[m
+[32m+[m	[32mpublic void setName(String name) {[m
+[32m+[m		[32mthis.name = name;[m
+[32m+[m	[32m}[m
+[32m+[m
+[32m+[m	[32mpublic String getEmail() {[m
+[32m+[m		[32mreturn email;[m
+[32m+[m	[32m}[m
+[32m+[m
+[32m+[m	[32mpublic void setEmail(String email) {[m
+[32m+[m		[32mthis.email = email;[m
+[32m+[m	[32m}[m
+[32m+[m
+[32m+[m	[32mpublic String getPassword() {[m
+[32m+[m		[32mreturn password;[m
+[32m+[m	[32m}[m
+[32m+[m
+[32m+[m	[32mpublic void setPassword(String password) {[m
+[32m+[m		[32mthis.password = password;[m
+[32m+[m	[32m}[m
+[32m+[m
+[32m+[m[41m	[m
+[32m+[m[41m	[m
+[32m+[m[41m	[m
+ }[m
